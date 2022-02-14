@@ -4,13 +4,45 @@
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
-    <link href="./styles.css" rel="stylesheet">
+    <link href="./styles/styles.css" rel="stylesheet">
     <title>Hello World!</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-
-    <!-- You can also require other files to run in this process -->
+    <section class="Background--menu">
+      <div class="falling-stars">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+      </div>
+      <section class="Menu">
+        <div class="container--title">
+          <h1>The Cinders of Akiria</h1>
+        </div>
+        <ul class="Menu-list" data-offset="10">
+          <li class="Menu-list-item" data-offset="20">
+            Continue
+            <span class="Mask"><span>Continue</span></span>
+            <span class="Mask"><span>Continue</span></span>
+          </li>
+          <li class="Menu-list-item" data-offset="20">
+            New game
+            <span class="Mask"><span>New game</span></span>
+            <span class="Mask"><span>New game</span></span>
+          </li>
+          <li class="Menu-list-item" data-offset="20">
+            Load game
+            <span class="Mask"><span>Load game</span></span>
+            <span class="Mask"><span>Load game</span></span>
+          </li>
+        </ul>
+      </section>
+    </section>
     <script src="./renderer.js"></script>
   </body>
 </html>
