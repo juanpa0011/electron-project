@@ -31,10 +31,18 @@
 }
 
 .Menu-list {
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 3;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
   justify-self: flex-start;
   -ms-flex-item-align: center;
       align-self: center;
   margin-left: 25px;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
   font-size: 3rem;
   line-height: 1.2;
   text-transform: uppercase;
@@ -104,21 +112,18 @@
           transform: translateY(-49%);
 }
 
-.Menu-list-item:hover .Mask,
-.Menu-list-item:active .Mask {
+.Menu-list-item:hover .Mask, .Menu-list-item:active .Mask {
   color: #FFF;
   -webkit-transform: skewX(12deg) translateX(5px);
           transform: skewX(12deg) translateX(5px);
 }
 
-.Menu-list-item:hover .Mask + .Mask,
-.Menu-list-item:active .Mask + .Mask {
+.Menu-list-item:hover .Mask + .Mask, .Menu-list-item:active .Mask + .Mask {
   -webkit-transform: skewX(12deg) translateX(-5px);
           transform: skewX(12deg) translateX(-5px);
 }
 
-.Menu-list-item:hover::before,
-.Menu-list-item:active::before {
+.Menu-list-item:hover::before, .Menu-list-item:active::before {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-box-shadow: 0px 0px 15px white;
@@ -133,6 +138,8 @@
   right: 1px;
   -webkit-transform: rotateZ(15deg);
           transform: rotateZ(15deg);
+  -webkit-transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
 }
 
 .falling-stars .star {
@@ -386,6 +393,24 @@
   -webkit-text-fill-color: transparent;
 }
 
+#chapter-one {
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 3;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -397,5 +422,12 @@ body {
   font-family: "Gilroy ExtraBold", system-ui, sans-serif;
   color: white;
   overflow: hidden;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 /*# sourceMappingURL=styles.css.map */
